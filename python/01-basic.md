@@ -33,9 +33,9 @@ while n<3:
   print(dust[n])
   n = n + 1
 > `for`
-```dust = [1,2,3]
+dust = [1,2,3]
 for i in dust:
-  print(i)```
+  print(i)
 
 ## 함수
 특정한 용도의 동작하는 코드를 한 곳에 모아 놓은 것
@@ -49,4 +49,4 @@ for i in dust:
 # 웹 페이지 크롤링
 크롤링 : 기어가다
 
-```$ pip install requests```
+$ pip install requests

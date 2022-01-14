@@ -11,7 +11,7 @@
 ### 순서 없는 목록
 `-`혹은 `*`를 앞에 붙이고 띄어쓰기
 
-- puthon
+- python
 - js
 - web
 - django
