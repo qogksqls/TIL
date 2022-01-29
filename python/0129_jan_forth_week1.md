@@ -94,3 +94,40 @@ original_list # [5, 2, 3]
 - list() 활용
 - 
 ## 깊은 복사(Deep copy)
+
+# 에러 & 예외 처리
+## 에러(Error)
+### 문법 에러(Syntax Error)
+- 에러 발생 시 `SyntaxError`라는 키워드와 함께, 에러의 상세 내용을 보여줍니다.
+- `파일이름`과 `줄번호`, `^` 문자를 통해 파이썬이 코드를 읽어 들일 때(`parser`) 문제가 발생한 위치를 표현합니다.
+- `parser` 는 줄에서 에러가 감지된 가장 앞의 위치를 가리키는 캐럿(caret)기호(`^`)를 표시합니다.
+
+## 예외(Exception)
+- `ZeroDivistionError` : 파이썬에서는 어떤 수를 0으로 나누게 되면 에러가 발생
+- `NameError` : 지역 혹은 전역 이름 공간 내에서 유효하지 않는 이름은 사용할 수 없습니다. 즉, 어느 곳에서도 정의되지 않은 변수를 호출하였을 경우 에러가 발생
+- `TypeError` : 자료형이 올바르지 못한 경우
+- `ValueError` : 자료형은 올바르나 값이 적절하지 않은 경우
+- `IndexError` : 존재하지 않는 index로 조회할 경우
+- `KeyError` : 존재하지 않는 Key로 접근한 경우
+- `ModuleNotFoundError` : 존재하지 않는 Module을 import 하는 경우
+- `ImportError` : Module은 찾았으나 존재하지 않는 클래스/함수를 가져오는 경우
+- `KeyboardInterrupt` : 사용자가 임의로 실행을 중단한 경우. 주피터 노트북에서는 정지 버튼이지만, 실제로 우리가 돌릴 때는 ctrl+c를 통해 종료하였을 때 발생합니다.
+- `IndentationError` : Indentation(들여 쓰기)이 적절하지 않은 경우
+
+# 예외 처리(Exception Handling)
+## try & except
+```
+try:
+    <코드 블록 1>
+except (예외):
+    <코드 블록 2>
+```
+- `try` 아래의 코드 블록(code block)이 실행됩니다.
+- 예외가 발생되지 않으면, `except` **없이 실행이 종료됩니다.**
+- 예외가 발생하면, **남은 부분을 수행하지 않고**, `except`가 실행됩니다.
+
+## 복수의 예외 처리
+
+## 예외 발생 시키기(Exception Raising)
+- `raise` : 예외 강제로 발생
+- `aseert` : 예외 강제 발생, `AssertionError` 무조건 발생
