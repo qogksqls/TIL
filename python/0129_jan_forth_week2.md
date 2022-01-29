@@ -22,7 +22,7 @@
   
 - 다른 언어와 달리 파이썬에서 캡슐화는 암묵적으로는 존재하지만, 언어적으로는 존재하지 않습니다.
 
-**접근제어자의 종류**
+- **접근제어자의 종류**
 - Public Access Modifier
 - Protected Access Modifier : 언더바 하나
 - Private Access Modifier : 언더바 두개
