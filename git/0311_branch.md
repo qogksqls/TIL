@@ -22,11 +22,11 @@
   - 그리고 commit 할 때 별도의 메세지 쓰지 마라(-m 하지마라) 그리고 `esc` + `:wq` 쓰고 탈출
 - 반면 동일 파일이러라도 서로 다른 부분을 수정했다면 conflict 없이 자동으로 merge commit 된다.
 
-### 다른 명령어
+## 다른 명령어
 `$ git log --oneline (--all)` : commit한 것들 한줄로 보임
 `$ git log --oneline (--all) (--graph)` : commit한 것들 가지까지 보임
 
-### `checkout` 추가설명
+## `checkout` 추가설명
 - `checkout` = `switch` + `restore`
 - `checkout`은 옛날 버전, 사용이 중복되는 경우가 많아서 `switch`와 `restore`로 나뉘어짐
 - `restore`: restore working tree files
