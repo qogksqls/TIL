@@ -80,8 +80,9 @@ methods: {
 <video-list :videos="videos" @select-video="onSelectVideo"></video-list>
 ```
 - 아래 설명 처럼 iframe 사용
-<img src="./src/assets/youtube.png" width="100px" height="50px" title="Youtube iframe 문서"/>
+
 ```javascript
+<img src="./src/assets/youtube.png" title="Youtube iframe 문서"/>
 computed: {
     videoURI() {
         const videoId = this.video.id.videoId
