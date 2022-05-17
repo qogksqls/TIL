@@ -81,8 +81,9 @@ methods: {
 ```
 - 아래 설명 처럼 iframe 사용
 
-```javascript
 <img src="./src/assets/youtube.png" title="Youtube iframe 문서"/>
+
+```javascript
 computed: {
     videoURI() {
         const videoId = this.video.id.videoId
