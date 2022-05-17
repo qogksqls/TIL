@@ -88,7 +88,7 @@ computed: {
     videoURI() {
         const videoId = this.video.id.videoId
         return `https://www.youtube.com/embed/${videoId}`
-    }
+    }`
 }
 ```
 
