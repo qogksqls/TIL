@@ -5,33 +5,21 @@
     </div>
 
     <div class="video-info">
-      <h2>{{ video.snippet.title | strUnescape }}</h2>
-      <p>{{ video.snippet.description | strUnescape }}</p>
+      <h2>{{ selectedVideo.snippet.title | strUnescape }}</h2>
+      <p>{{ selectedVideo.snippet.description | strUnescape }}</p>
     </div>
   </div>
 </template>
 
 <script>
   import _ from 'lodash'
+  import { mapGetters, mapState } from 'vuex'
 
   export default {
     name: 'VideoDetail',
-    props: {
-      video: Object,
-    },
     computed: {
-      videoSrc() {
-        const videoId = this.video.id?.videoId
-        return `https://www.youtube.com/embed/${videoId}`
-      },
-      isVideo() {
-        return !_.isEmpty(this.video)
-      },
-    },
-    filters: {
-      strUnescape(rawText) {
-        return _.unescape(rawText)
-      },
+      ...mapState(['selectedVideo']),
+      ...mapGetters(['isSelectedVideo', 'videoSrc']),
     },
   }
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <li class="list-group-item" @click="onClick">
+  <li class="list-group-item" @click="setSelectedVideo(video)">
     <img :src="videoImgSrc" :alt="video.title" />
     {{ video.snippet.title | strUnescape }}
   </li>
@@ -7,24 +7,19 @@
 
 <script>
   import _ from 'lodash'
+  import { mapActions } from 'vuex'
+
   export default {
     name: 'VideoListItem',
     props: {
       video: Object,
     },
     methods: {
-      onClick() {
-        this.$emit('select-video', this.video)
-      },
+      ...mapActions(['setSelectedVideo']),
     },
     computed: {
       videoImgSrc() {
         return this.video.snippet.thumbnails.default.url
-      },
-    },
-    filters: {
-      strUnescape(rawText) {
-        return _.unescape(rawText)
       },
     },
   }

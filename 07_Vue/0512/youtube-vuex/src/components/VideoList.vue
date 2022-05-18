@@ -5,7 +5,6 @@
         v-for="video in videos"
         :key="video.id.videoId"
         :video="video"
-        @select-video="onSelectVideo"
       >
       </video-list-item>
     </ul>
@@ -14,17 +13,14 @@
 
 <script>
   import VideoListItem from '@/components/VideoListItem.vue'
+  import { mapState } from 'vuex'
+
   export default {
     name: 'VideoList',
     components: { VideoListItem },
-    props: {
-      videos: Array,
-    },
-    methods: {
-      onSelectVideo(video) {
-        this.$emit('select-video', video)
-      },
-    },
+    computed: {
+      ...mapState(['video'])
+    }
   }
 </script>
 
